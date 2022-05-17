@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+        table {
+            width: 900px;
+            background-color: #fffda9;
+            height: 400px;
+            padding: 30px; 
+        }
+
+        th {
+            background-color: #d4fdd6;
+            text-align: left;
+        }
+
+        td {
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+        <table>
+            <form method="post">
+                <tr>
+                    <th colspan="6">ĐĂNG KÝ HỌC VIÊN</th>
+                </tr>
+                <tr>
+                    <td>
+                        <lable>Họ và tên</lable>
+                    </td>
+                    <td colspan="3"><input type="text" name="Name"></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <lable>Ngày sinh</lable>
+                    </td>
+                    <td colspan="2"><input type="text" name="Ngày sinh"></td>
+
+                    <td></td><br>
+                </tr>
+                <tr>
+                    <td>
+                        <lable>Ngày sinh</lable>
+                    </td>
+                    <td><input type="radio" name="giới tính">Nam <input type="radio" name="giới tính">Nữ</td>
+                    <br>
+                </tr>
+                <tr>
+                    <td>
+                        <lable>Địa chỉ</lable>
+                    </td>
+                    <td colspan="2"><input type="text" name="địa chỉ"></td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <lable>Lớp</lable>
+                    </td>
+                    <td><select>
+                            <option value="Chọn lớp">Chọn lớp</option>
+                            <option value="học hát">Học hát</option>
+                            <option value="học múa">Học múa</option>
+                            <option value="học đàn">Học đàn</option>
+                            </selectt>
+                    </td>
+                    <br>
+                </tr>
+                <tr>
+                    <td>
+                        <lable></lable>Email
+                    </td>
+                    <td><input type="text" name="email"></td>
+                    <br>
+                </tr>
+                <tr>
+                    <td>
+                        <lable>Điện thoại</lable>
+                    </td>
+                    <td><input type="text" name="điện thoại"></td>
+                    <br>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="button" value="Đăng kí">
+                        <input type="button" value="Nhập lại"></td>
+                </tr>
+            </form>
+        </table>
+</body>
+
+</html>
