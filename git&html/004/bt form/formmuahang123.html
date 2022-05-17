@@ -11,6 +11,26 @@
     }   #first2 {
         background-color: #e6e6e6;
     }
+    .name {
+        width: 800px;
+        height: 100px;
+    }
+    .a1 {
+        width: 600px;
+        height: 20px;
+    }
+    .a2 {
+        width: 600px;
+        height: 20px;
+    }
+    .a3 {
+        width: 30px;
+        height: 15px;
+    }
+    .a4 {
+        width: 60px;
+        height: 15px;
+    }
     </style>
     
 </head>
@@ -19,11 +39,18 @@
         <h1>Maket Research Survay</h1>
         <p>Please take a few momments to complete this satisfaction survay</p>
         <lable><b>What is your age range</b></lable><br>
-        <select>
+        <select class="a1">
             <option value="18-24">18-24</option>
             <option value="25-34">25-34</option>
             <option value="35-50">35-50</option>
             <option value="50+">50+</option>
+        </select><br>
+        <lable><b>What is your yearly income range?</b></lable><br>
+        <select class="a2">
+            <option value="$0-$25,000">$0-$25,000</option>
+            <option value="$25001-$50000">$25001-$50000</option>
+            <option value="$50001-$100000">$50001-$100000</option>
+            <option value="100000+">100000+</option>
         </select><br>
         <lable><b>Gender Identity</b></lable><br>
         <input type="radio" name="giới tính">Male</input><br>
@@ -43,19 +70,21 @@
         <table>
             <tr>
                 <td><lable>$</lable></td>
-                <td><input type="text" name="dollars"></td>
-                <td><input type="test" name="Cents"></td>
+                <td><input class="a4" type="text" name="dollars"></td>
+                <td><label>.</label></td>
+                <td><input class="a3" type="test" name="Cents"></td>
             </tr>
             <tr>
                 <td></td>
                 <td><lable>Dollars</lable></td>
+                <td></td>
                 <td><lable>Cents</lable></td><br>
             </tr>
         </table>
         <lable><b>What features would you like to see in the new product.</b></lable><br>
         <table id="bang1">
             <tr>
-                <td><input type="text" name="features"><br></td>
+                <td><input class="name" type="text" name="features"><br></td>
             </tr>
         </table>
         <lable>Please rate your level of agreement with the following statements</lable><br>
@@ -101,6 +130,7 @@
                     <label>4</label></td>
             </tr>
         </table>
+        <input type="button" value="submit">
     </form>
 </body>
 </html>
