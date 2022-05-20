@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            text-align: center;
+        }
+        #xuat {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+             <tr>
+                 <td><label>Amount</label></td>
+                 <td><label>From Currency</label></td>
+                 <td><label>To Currency</label></td>
+             </tr>
+             <tr>
+                 <td><input id="nhap" type="text" name="tien"></td>
+                 <td><select id="from">
+                     <option value="VND">VND</option>
+                     <option value="USD">USD</option>
+                 </select></td>
+                 <td><select id="to">
+                     <option value="VND">VND</option>
+                     <option value="USD">USD</option>
+                 </select>
+                 <td><input onclick="chuyen_tien()" type="button" value="convert"></td>
+                 </td>
+             </tr>
+             <tr>
+                 <td id="xuat" colspan="3"><label></label></td>
+             </tr>
+        </table>
+    </form>
+ <script>
+function chuyen_tien() {
+    var Nhap = document.getElementById("nhap").value;
+    var from2 = document.getElementById("from").value;
+    var to2 = document.getElementById("to").value;
+    var xuat1;
+    // xuat1 = (from2=="USD" && to2=="VND")? xuat1 = "Result: " + (Nhap*23000) +"Đ" : "";
+    if (from2=="USD" && to2=="VND") {xuat1 = "Result: " + (Nhap*23000) +"Đ"}
+    if (from2=="USD" && to2=="USD") {xuat1 = "Result: " + Nhap +"$"}
+    if (from2=="VND" && to2=="VND") {xuat1 = "Result: " + Nhap +"Đ"}
+    if (from2=="VND" && to2=="USD") {xuat1 = "Result: " + (Nhap/23000) +"$"}
+    // else if (from2=="VND" && to2=="USD") {xuat1 = "Result: " + (Nhap/23000) + "$"}
+    // else if (from2=="VND") {xuat1 = "Result: " + Nhap + "Đ"}
+    // else {xuat1 = "Result: " + Nhap + "$"}
+    document.getElementById("xuat").innerHTML = xuat1;
+}
+ -->
+
+
+<!-- 
+ </script>
+<!-- <form>
+    <table>
+        <tr>
+            <td><label>Amount</label></td>
+            <td><label>From Currency</label></td>
+            <td><label>To Currency</label></td>
+        </tr>
+        <tr>
+            <td><input id="nhap" type="text" value=""></td>
+            <td><select id="vao">
+                <option value="VND">VND</option>
+                <option value="USD">USD</option>
+            </select></td>
+            <td>
+                <select id="ra">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td><input type="button" value="convert"></td>
+        </tr>
+        <tr>
+            <td id="Result" onclick="chuyen_tien()" ><label></label></td>
+        </tr>
+    </table>
+</form>
+<script>
+    function chuyen_tien(){
+        var nhap1 = document.getElementById("nhap").value;
+        var vao1 = document.getElementById("vao").value;
+        var ra1 = document.getElementById("ra").value;
+    }
+</script>
+ -->
+
+
+
+</body>
+</html>

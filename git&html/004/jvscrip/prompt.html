@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Nhập số thứ nhất:
+        <input type="text" id="so_thu_nhat" value=""><br>
+        Nhập số thứ hai:
+        <input type="text" id="so_thu_hai" value=""><br>
+    
+        <input type="button" value="Tính" onclick="khoi_xu_ly()">
+</form> 
+<script>
+        // document.getElementById("one").innerHTML = value;
+        // var a =parseInt(prompt("Nhập số thứ nhất"));//3
+        // var b =parseInt(prompt("Nhập số thứ hai")); //5
+        // var ketqua = a+b;
+        // alert(ketqua);
+
+        function khoi_xu_ly(){
+            var a = parseInt(document.getElementById('so_thu_nhat').value);
+            var b = parseInt(document.getElementById('so_thu_hai').value);
+            var c = a+b;
+            alert(c);
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,88 +8,132 @@
     <title>Document</title>
     <style>
         #first1 {
-        background-color: #e6e6e6;
-    }   #first2 {
-        background-color: #e6e6e6;
-    }
-    .name {
-        width: 800px;
-        height: 100px;
-    }
-    .a1 {
-        width: 600px;
-        height: 20px;
-    }
-    .a2 {
-        width: 600px;
-        height: 20px;
-    }
-    .a3 {
-        width: 30px;
-        height: 15px;
-    }
-    .a4 {
-        width: 60px;
-        height: 15px;
-    }
+            background-color: #e6e6e6;
+        }
+
+        #first2 {
+            background-color: #e6e6e6;
+        }
+
+        .name {
+            width: 800px;
+            height: 100px;
+        }
+
+        .a1 {
+            width: 600px;
+            height: 20px;
+        }
+
+        .a2 {
+            width: 600px;
+            height: 20px;
+        }
+
+        .a3 {
+            width: 30px;
+            height: 15px;
+        }
+
+        .a4 {
+            width: 60px;
+            height: 15px;
+        }
+
+        #bang1 {
+            border: 1px solid black;
+        }
     </style>
-    
+
 </head>
+
 <body>
-    <form>
-        <h1>Maket Research Survay</h1>
-        <p>Please take a few momments to complete this satisfaction survay</p>
-        <lable><b>What is your age range</b></lable><br>
-        <select class="a1">
+    <table>
+        <form>
+         
+         <h1>Maket Research Survay</h1>
+         <p>Please take a few momments to complete this satisfaction survay</p>
+         <tr id="k"onclick="secon_()";>
+          <td><lable><b>What is your age range</b></lable><br>
+            <select class="a1">
             <option value="18-24">18-24</option>
             <option value="25-34">25-34</option>
             <option value="35-50">35-50</option>
             <option value="50+">50+</option>
-        </select><br>
-        <lable><b>What is your yearly income range?</b></lable><br>
-        <select class="a2">
+            </select><br>
+          </td>
+         </tr>
+        <tr id="k1" onclick="secon_1()";>
+         <td><lable><b>What is your yearly income range?</b></lable><br>
+           <select class="a2">
             <option value="$0-$25,000">$0-$25,000</option>
             <option value="$25001-$50000">$25001-$50000</option>
             <option value="$50001-$100000">$50001-$100000</option>
             <option value="100000+">100000+</option>
-        </select><br>
-        <lable><b>Gender Identity</b></lable><br>
-        <input type="radio" name="giới tính">Male</input><br>
-        <input type="radio" name="giới tính">Female</input><br>
-        <input type="radio" name="giới tính">Nonbinary</input><br>
-        <input type="radio" name="giới tính">Other</input><br>
-        <input type="text" name="giới tính"></input><br>
-        <lable><b>Which of the following products have your purchased in the last 2 months. Please check all that apply.</b></lable><br>
-        <input type="checkbox" name="produce">Produce 1</input><br>
-        <input type="checkbox" name="produce">Produce 2</input><br>
-        <input type="checkbox" name="produce">Produce 3</input><br>
-        <lable><b>How often would you use our new product?</b></lable><br>
-        <input type="radio" name="daily">Daily<br>
-        <input type="radio" name="weekly">Weekly<br>
-        <input type="radio" name="Monthly">Monthly<br>
-        <lable><b>What would you pay for the new product?</b></lable><br>
-        <table>
+           </select><br>
+          </td>
+        </tr>
+        <tr id="k2" onclick="secon_2()";>
+         <td><lable><b>Gender Identity</b></lable><br>
+            <input type="radio" name="gender">Male</input><br>
+            <input type="radio" name="gender">Female</input><br>
+            <input type="radio" name="gender">Nonbinary</input><br>
+            <input type="radio" name="gender" onclick="su_kien()"; onkeyup="su_kien()">Other</input><br>
+            <input type="text" onclick="su_kien()"></input><br>
+            <label id="file"></label><br>
+         </td>
+        </tr>
+        <tr id="k3" onclick="secon_3()";>  
+         <td><lable><b>Which of the following products have your purchased in the last 2 months. Please check all that
+                apply.</b></lable><br>
+            <input type="checkbox" name="produce">Produce 1</input><br>
+            <input type="checkbox" name="produce">Produce 2</input><br>
+            <input type="checkbox" name="produce">Produce 3</input><br>
+         </td>
+        </tr>  
+        <tr id="k4" onclick="secon_4()";>   
+         <td><lable><b>How often would you use our new product?</b></lable><br>
+            <input type="radio" name="often">Daily<br>
+            <input type="radio" name="often">Weekly<br>
+            <input type="radio" name="often">Monthly<br>
+         </td>
+        </tr> 
+        <tr id="k5" onclick="secon_5()";>
+         <td><lable><b>What would you pay for the new product?</b></lable><br>
+            <table>
             <tr>
-                <td><lable>$</lable></td>
+                <td>
+                    <lable>$</lable>
+                </td>
                 <td><input class="a4" type="text" name="dollars"></td>
                 <td><label>.</label></td>
                 <td><input class="a3" type="test" name="Cents"></td>
             </tr>
             <tr>
                 <td></td>
-                <td><lable>Dollars</lable></td>
+                <td>
+                    <lable>Dollars</lable>
+                </td>
                 <td></td>
-                <td><lable>Cents</lable></td><br>
+                <td>
+                    <lable>Cents</lable>
+                </td><br>
             </tr>
-        </table>
-        <lable><b>What features would you like to see in the new product.</b></lable><br>
-        <table id="bang1">
+            </table>
+         </td>
+        </tr>
+        <tr id="k6" onclick="secon_6()";>
+         <td><lable><b>What features would you like to see in the new product.</b></lable><br>
+            <table id="bang1">
             <tr>
                 <td><input class="name" type="text" name="features"><br></td>
             </tr>
-        </table>
-        <lable>Please rate your level of agreement with the following statements</lable><br>
-        <table>
+            </table>
+         </td>
+        </tr>
+        <tr id="k7" onclick="secon_7()";>
+         <td><lable>Please rate your level of agreement with the following statements</lable><br>
+            <table id="bang1">
             <tr id="first1">
                 <td></td>
                 <td>strongly Disagree</td>
@@ -99,38 +144,90 @@
             <tr>
                 <td><label><b>Our products are priced fairly</b></label> </td>
                 <td><input type="radio" name="chon1"><br>
-                <label>1</label></td>
+                    <label>1</label>
+                </td>
                 <td><input type="radio" name="chon1"><br>
-                    <label>2</label></td>
+                    <label>2</label>
+                </td>
                 <td><input type="radio" name="chon1"><br>
-                    <label>3</label></td>
+                    <label>3</label>
+                </td>
                 <td><input type="radio" name="chon1"><br>
-                    <label>4</label></td>
+                    <label>4</label>
+                </td>
             </tr>
             <tr id="first2">
-                <td><label><b>Our product are high quality</b></lable></td>
+                <td><label><b>Our product are high quality</b></lable>
+                </td>
                 <td><input type="radio" name="chon2"><br>
-                    <label>1</label></td>
+                    <label>1</label>
+                </td>
                 <td><input type="radio" name="chon2"><br>
-                    <label>2</label></td>
+                    <label>2</label>
+                </td>
                 <td><input type="radio" name="chon2"><br>
-                    <label>3</label></td>
+                    <label>3</label>
+                </td>
                 <td><input type="radio" name="chon2"><br>
-                    <label>4</label></td>
+                    <label>4</label>
+                </td>
             </tr>
             <tr>
                 <td><label><b>You would recommend our product to a friend or coworker</b></label></td>
                 <td><input type="radio" name="chon3"><br>
-                    <label>1</label></td>
+                    <label>1</label>
+                </td>
                 <td><input type="radio" name="chon3"><br>
-                    <label>2</label></td>
+                    <label>2</label>
+                </td>
                 <td><input type="radio" name="chon3"><br>
-                    <label>3</label></td>
+                    <label>3</label>
+                </td>
                 <td><input type="radio" name="chon3"><br>
-                    <label>4</label></td>
+                    <label>4</label>
+                </td>
             </tr>
         </table>
-        <input type="button" value="submit">
+    </td>
+    </tr>
+    <tr id="k8" onclick="secon_8()";>
+     <td><input type="button" value="submit">
     </form>
+</table>
+</td>
+</tr>
+    <script>
+        function su_kien() {
+            var x = 'Maximum of 250 characters.    Currently Used: 0 characters.'
+         document.getElementById("file").innerHTML=x ;}
+         function secon_() {
+            
+         document.getElementById("k").style.backgroundColor='#fff7c0';}
+         function secon_1() {
+            
+            document.getElementById("k1").style.backgroundColor='#fff7c0';}
+            function secon_2() {
+            
+            document.getElementById("k2").style.backgroundColor='#fff7c0';}
+            function secon_3() {
+            
+            document.getElementById("k3").style.backgroundColor='#fff7c0';}
+            function secon_4() {
+            
+            document.getElementById("k4").style.backgroundColor='#fff7c0';}
+            function secon_5() {
+            
+            document.getElementById("k5").style.backgroundColor='#fff7c0';}
+            function secon_6() {
+            
+            document.getElementById("k6").style.backgroundColor='#fff7c0';}
+            function secon_7() {
+            
+            document.getElementById("k7").style.backgroundColor='#fff7c0';}
+            function secon_8() {
+            
+            document.getElementById("k8").style.backgroundColor='#fff7c0';}
+    </script>
 </body>
+
 </html>
