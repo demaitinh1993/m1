@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p><b>Tính chỉ số cân nặng</b></p>
+        <label>Nhập cân nặng:(kg)</label>
+        <input id="can_nang" type="text" ><br>
+        <label>Nhập chiều cao:(m)</label>
+        <input id="chieu_cao" type="text"><br>
+        <input onclick="kiem_tra_1()" type="button" value="Kiểm tra"><br>
+        <label id="xuat"></label>
+    </form>
+    <script>
+        function kiem_tra_1(){
+        var a = parseFloat(document.getElementById("can_nang").value);
+        var b = parseFloat(document.getElementById("chieu_cao").value);
+        var c = a / (b*b);
+        var xuat ="";
+        // switch(true){
+        //     case c<"18,5":
+        //         document.getElementById("xuat").innerHTML = "Cơ thể của bạn hơi gầy";
+        //         break;
+        //     case c<"25":
+        //         document.getElementById("xuat").innerHTML = "Cơ thể của bạn cân đối";
+        //         break;
+        //     case c<"30":
+        //         document.getElementById("xuat").innerHTML = "Cơ thể của bạn hơi mập";
+        //         break;
+        //     default:
+        //         document.getElementById("xuat").innerHTML = "Cơ thể của bạn béo phì";
+        //         break;
+                
+        //         }
+        // }
+        if(c<"18,5"){
+            xuat ="gầy"
+        }else if(c<"25"){
+            xuat="cân đối"
+        }else if(c<"30"){
+            xuat="mập"
+        }else 
+        {xuat="béo phì"}
+        document.getElementById("xuat").innerHTML="Chỉ số BMI là bạn: " + xuat;
+            // document.getElementById("xuat").innerHTML=c;
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>

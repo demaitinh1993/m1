@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var i=10;
+
+        // for(i=10;i>=1;i=i-1){
+        //     if (i%2!==0){
+        //         console.log(i);
+        //     }
+        // }
+
+
+        // var i=0;
+        // while(i<10){
+        //     console.log(i);
+        //     i++;
+        // }
+
+
+
+        // var text='hello';
+        // while(text!=='q'){
+        //     document.write(text + "<br/>");
+        //     text = prompt("enter your name");
+        // }
+
+        //     var i = 0;
+        // do{
+        //     console.log(i);
+        //     i++;
+        // }
+        // while(i<=5)
+
+        // var a;
+        // var a = "<table border='1' cellspacing='0' cellpadding='3' width='100%' height='300'>";
+        //     for(i=1;i<=10;i++){
+        //         a = a + "<tr>";
+        //             for(j=1; j <= 10; j++){
+        //                 a = a + "<td>"+j+"x"+i+"="+i*j+"</td>";
+        //             }
+        //             a = a + "</tr>";
+        //     }
+        //     a = a + "</table>";
+        //     document.write(a);
+
+
+
+
+        var sum = 0;
+        var count = 0;
+        var b = parseInt(prompt("tổng n số chia hết cho 7 đầu tiên"));
+
+        for (var i = 0; i < 1000; i++) {
+            if (i % 7 == 0) {
+                count++;
+                sum += i;
+            }
+            if (count == b) {
+                document.write(sum);
+                break;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

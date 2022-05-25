@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            background: #ccc;
+            margin:0 auto;
+            width: 250px;
+            padding: 10px;
+            border-radius: 10px;
+            }
+            table {
+                background-color: aliceblue;
+            }
+
+            #a {
+                background-color: yellow;
+            }
+            
+    </style>
+
+</head>
+<body>
+    <form>
+        <table cellspacing="0px" cellpadding="0px" border="2px" >
+            <tr>
+                <th colspan="3"><input type="text" id="display"></th>
+                <td><input id="a" type="button" value="CE" onclick="khoi_10()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" onclick="khoi_1()"></td>
+                <td><input type="button" value="2" onclick="khoi_2()"></td>
+                <td><input type="button" value="3" onclick="khoi_3()"></td>
+                <td><input id="a" type="button" value="+" onclick="khoi_cong()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="khoi_4()"></td>
+                <td><input type="button" value="5" onclick="khoi_5()"></td>
+                <td><input type="button" value="6" onclick="khoi_6()"></td>
+                <td><input id="a" type="button" value="-" onclick="khoi_tru()"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" onclick="khoi_7()"></td>
+                <td><input type="button" value="8" onclick="khoi_8()"></td>
+                <td><input type="button" value="9" onclick="khoi_9()"></td>
+                <td><input id="a" type="button" value="*" onclick="khoi_nhan()"></td>
+            </tr>
+            <tr>
+                <td><input id="a" type="button" value="C" onclick="khoi_C()"></td>
+                <td><input id="a" type="button" value="0" onclick="khoi_0()"></td>
+                <td><input id="a" type="button" value="=" onclick="khoi_bang()"></td>
+                <td><input id="a" type="button" value="/" onclick="khoi_chia()"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function khoi_1(){
+            var a =document.getElementById("display").value;
+            a = a+1;
+            document.getElementById("display").value=a;
+        }
+        function khoi_2(){
+            var a =document.getElementById("display").value;
+            a = a+2;
+            document.getElementById("display").value=a
+        }
+        function khoi_3(){
+            var a =document.getElementById("display").value;
+            a = a+3;
+            document.getElementById("display").value=a
+        }
+        function khoi_cong(){
+            var a =document.getElementById("display").value;
+            a = a + "+";
+            document.getElementById("display").value=a;
+        }
+        function khoi_4(){
+            var a =document.getElementById("display").value;
+            a = a + 4;
+            document.getElementById("display").value=a;
+        }
+        function khoi_5(){
+            var a =document.getElementById("display").value;
+            a = a +5;
+            document.getElementById("display").value=a;
+        }
+        function khoi_6(){
+            var a =document.getElementById("display").value;
+            a = a +6;
+            document.getElementById("display").value=a;
+        }
+        function khoi_tru(){
+            var a =document.getElementById("display").value;
+            a = a + "-";
+            document.getElementById("display").value=a;
+        }
+        function khoi_7() {
+            var a =document.getElementById("display").value;
+            a = a + 7;
+            document.getElementById("display").value=a;
+        }
+        function khoi_8() {
+            var a =document.getElementById("display").value;
+            a = a+8;
+            document.getElementById("display").value=a;
+        }
+        function khoi_9() {
+            var a =document.getElementById("display").value;
+            a = a+9;
+            document.getElementById("display").value=a;
+        }
+        function khoi_nhan() {
+            var a =document.getElementById("display").value;
+            a= a+"*";
+            document.getElementById("display").value=a;
+        }
+        function khoi_C(){
+            var a =document.getElementById("display").value;
+            a="";
+            document.getElementById("display").value=a;
+        }
+        function khoi_0() {
+            var a =document.getElementById("display").value;
+            a= a+ 0;
+            document.getElementById("display").value=a;
+        }
+        function khoi_bang() {
+            var a =document.getElementById("display").value;
+            var b= eval(a);
+            document.getElementById("display").value=b;
+        }
+        function khoi_chia() {
+            var a =document.getElementById("display").value;
+            a = a + "/";
+            document.getElementById("display").value=a;
+        }
+        function khoi_10() {
+            var a =document.getElementById("display").value;
+            var b=a.substr(0,a.length -1);
+            document.getElementById("display").value=b;
+        }
+    </script>
+</body>
+</html>

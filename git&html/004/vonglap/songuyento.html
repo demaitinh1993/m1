@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>Hiển thị a số nguyên đố đầu tiên</label>
+        <input type="text" id="nhap"><br>
+        <input type="button" id="kt" onclick="check_1()" value="Hiển thị"><br>
+        <label id="kq"></label>
+    </form>
+    <script>
+            function check_1(){
+            var a = parseInt(document.getElementById("nhap").value);
+            var uoc = 0;
+            var dem = 0;
+            for (var i = 2; i < 1000; i++) {
+                if (dem < a) {
+                    for (var j = 1; j <= i; j++) {
+                        if (i % j == 0) {
+                            uoc += 1;
+                        }
+                    }
+                    if (uoc == 2) {
+                        console.log(i)
+                        // document.write(i+"<br>")
+                        dem += 1;
+                    }
+                    uoc = 0;
+                } else {
+                        break;
+                }
+            }
+        }
+            // document.getElementById("kq").innerHTML=a;
+        // }
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>

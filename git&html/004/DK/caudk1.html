@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form>
+        <p><input id="so1" type="text" placeholder="a?"></p><br>
+        <p><input id="so2" type="text" placeholder="b?"></p><br>
+        <input type="button" value="Check" onclick="ket_qua_chia();"><br>
+        <p id="ket_qua"></p>
+    </form>
+    <script>
+        function ket_qua_chia() {
+        let a = Number.parseFloat(document.getElementById("so1").value);
+        let b = Number.parseFloat(document.getElementById("so2").value);
+        if (a%b == 0){
+            document.getElementById("ket_qua").innerHTML=a + " chia hết cho "+b;
+        }else{
+            document.getElementById("ket_qua").innerHTML=a + " không chia hết cho "+b;
+        }
+        }
+    </script> -->
+
+        <!-- <form>
+            <label>Nhập tên vào đây:</label>
+            <input id="name" type="text" name="name" value=""><br>
+            <label>Nhập tuổi vào đây:</label>
+            <input id="age" type="text" name="age" value=""><br>
+            <input id="Check" onclick="check_1();" type="button" value="Check"><br>
+            
+            <label id="ketqua"></label>
+
+        </form>
+        <script>
+            function check_1() {
+                let a =parseInt(document.getElementById("age").value);
+                let b =document.getElementById("name").value;
+                if(a>15){
+                    document.getElementById("ketqua").innerHTML=b + " đủ tuổi vào lớp 10"
+                }else{
+                    document.getElementById("ketqua").innerHTML=b + " không đủ tuổi vào lớp 10"
+                }
+            }
+        </script>
+ -->
+
+        <!-- <form>
+            <label>Nhập số vào đây</label>
+            <input type="text" name="number" id="number" placeholder="bỏ tiền vô đây"><br>
+            <input type="button" value="check" id="check" onclick="check1();"><br>
+            <label id="kq"></label>
+        </form>
+        <script>
+            function check1() {
+                let a = document.getElementById("number").value;
+                if (a>0) {
+                    document.getElementById("kq").innerHTML=a+" là số dương";
+                }else if(a<0) {
+                    document.getElementById("kq").innerHTML=a+" là số âm";
+                }else {
+                    document.getElementById("kq").innerHTML="toang rồi"
+                }
+            }
+        </script> -->
+<!-- 
+        <form>
+            <label>Nhập số thứ 1</label>
+            <input type="text" name="number" placeholder="số thứ 1" id="so1"><br>
+            <label>Nhập số thứ 2</label>
+            <input type="text" name="number" placeholder="số thứ 2" id="so2"><br>
+            <label>Nhập số thứ 3</label>
+            <input type="text" name="number" placeholder="số thứ 3" id="so3"><br>
+            <input type="button" id="check" onclick="check_1()"; value="check" ><br>
+            <label>Số lớn nhất là:</label>
+            <label id="kq"></label>
+        </form>
+        <script>
+            function check_1() {
+                let a = parseInt(document.getElementById("so1").value);
+                let b = parseInt(document.getElementById("so2").value);
+                let c = parseInt(document.getElementById("so3").value);
+                if (a>b && a>c){
+                    document.getElementById("kq").innerHTML=a;
+                }else if(b>a && b>c){
+                    document.getElementById("kq").innerHTML=b;
+                }else {
+                    document.getElementById("kq").innerHTML=c;
+                }
+            }
+        </script>
+ -->
+<!-- 
+            <form>
+                <label>Nhập điểm kiểm tra</label>
+                <input type="text" id="diemkt" placeholder="Điểm kiểm tra" value=""><br>
+                <label>Nhập điểm thi giữa kỳ</label>
+                <input type="text" id="diemgk" placeholder="Điểm giữa kỳ" value=""><br>
+                <label>Nhập điểm thi cuối kỳ</label>
+                <input type="text" id="diemck" placeholder="Điểm cuối kỳ" value=""><br>
+                <input type="button" id="check1" value="Xếp Loại" onclick="check();"><br>
+                <label>Xếp loại học lực:</label>
+                <label id="xeploai"></label>
+
+            </form>
+                <script>
+                    function check(){
+                    let a = parseFloat(document.getElementById("diemkt").value);
+                    let b = parseFloat(document.getElementById("diemgk").value);
+                    let c = parseFloat(document.getElementById("diemck").value);
+                    let d = (a+(b*2)+(c*3))/6;
+                    document.getElementById("xeploai").innerHTML=d;
+                       switch(true) {
+                        case (d>=8 && d<=10):
+                            document.getElementById("xeploai").innerHTML="Giỏi";
+                            break;
+                        case (d<=7.9 && d>=6.5):
+                            document.getElementById("xeploai").innerHTML="Khá";
+                            break;
+                        case (d<=6.4 && d>=5):
+                            document.getElementById("xeploai").innerHTML="Trung bình";
+                            break;
+                        case (d<=4.9 && d>=0):
+                            document.getElementById("xeploai").innerHTML="Kém"
+                            break;
+                        default:
+                            document.getElementById("xeploai").innerHTML="Vui lòng nhập lại";
+                            break;
+                       } 
+                    }
+
+
+
+                </script> -->
+
+
+<!-- 
+                <form>
+                    <label><b>Nhập doanh số bán hàng:</b></label>
+                    <input type="text" id="dso"><br>
+                    <input type="button" id="check" value="Tính" onclick="hoahong();"><br>
+                    <label>Hoa hồng nhận được:</label>
+                    <label id="kq"></label>
+                </form>
+                <script>
+                    function hoahong() {
+                        let a = parseInt(document.getElementById("dso").value,);
+                        let b = (a*10)/100;
+                        document.getElementById("kq").innerHTML =b +" VND";
+                    }
+                </script> -->
+
+
+<!-- 
+                <form>
+                    <label>Nhập số phút đã gọi:</label>
+                    <input type="text" id="time"><br>
+                    <input id="check1" type="button" onclick="check();" value="tính cước"><br>
+                    <label>Cước phí của bạn là:</label>
+                    <label id="cuoc"></label>
+                </form>
+                <script>
+                function check() {
+                    let a = parseFloat(document.getElementById("time").value);
+                    let b = a*1200;
+                    document.getElementById("cuoc").innerHTML =b+" VND"
+
+                }
+
+
+                </script> -->
+
+                
+
+
+
+
+</body>
+</html>

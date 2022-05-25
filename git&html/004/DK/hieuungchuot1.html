@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+<form>
+    <img id="anh" src="./pictrure/taolao.jpg" style="width:10%"><br>
+    <label><b>Click button to move the future</b></label>
+    <input type="button" value="click me" onclick="chay();">
+</form>
+    <script>
+        var a = null;
+        a = document.getElementById("anh");
+        function init(){
+            a = document.getElementById("anh");
+            a.style.position = "relative";
+            a.style.left = "0px";;
+        }
+        function chay() {
+            a.style.left = parseInt(a.style.left)+ 10 + "px";
+        }
+        window.onload = init;
+
+
+
+    </script>
+</body>
+</html>

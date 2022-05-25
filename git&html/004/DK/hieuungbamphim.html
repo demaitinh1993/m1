@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <img src="./pictrure/taolao.jpg" style="width:20%" id="anh"><br>
+
+ 
+    <script>
+        function upArrowPressed(){
+            let a = document.getElementById("anh");
+            a.style.top = parseInt(a.style.top) - 5 + "px";
+        }
+        function downArrowPressed (){
+            let a = document.getElementById("anh");
+            a.style.top = parseInt(a.style.top) + 5 + "px";
+        }
+        function leftArrowPressed (){
+            let a = document.getElementById("anh");
+            a.style.left = parseInt(a.style.left) - 5 + "px";
+        }
+        function rightArrowPressed (){
+            let a = document.getElementById("anh");
+            a.style.left = parseInt(a.style.left) + 5 + "px";
+        }
+        function moveselection(evt) {
+            switch (evt.keyCode){
+                case 1:
+                    leftArrowPressed();
+                    break;
+                case 2:
+                    rightArrowPressed();
+                    break;
+                case 3:
+                    upArrowPressed();
+                    break;
+                case 4:
+                    downArrowPressed();
+                    break;
+            }
+            function docReady() {
+                window.addEventListener("keydown", moveSelection);
+            }
+        }
+
+
+
+
+    </script>
+</body>
+</html>

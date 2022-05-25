@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // var a =parseInt(prompt("nhập số bạn muốn tính giai thừa:"));
+        // var gt=1;
+        // for(i=1;i<=a;i++){
+        //     if(i!=a){
+        //     document.write(i+"*");
+        //     }else{
+        //         document.write(i);
+        //     }
+        //     gt=gt*i;
+        // }document.write("="+gt);
+
+
+///tam giác vuông dưới
+
+            // for(var i=1;i<=4;i++){
+            //     document.write("*"+"<br>")
+            //     for(var j=0;j<i;j++){
+            //         document.write("*");
+            //     }
+            //     if(i==4){
+            //         document.write("*")
+            //     }
+            // }
+
+////tam giác vuông trên trái:
+
+            // for(var i=4;i>=0;i--){
+            //     for(var j=0;j<=i;j++){
+            //         document.write("*");
+            //     }
+            //     document.write("<br>");
+            // }
+//tam giác vuông dưới trái:
+
+            // for(var i=0;i<=4;i++){
+            //     for(j=0;j<=i;j++){
+            //         document.write("*");
+            //     }
+            //     document.write("<br>");
+            // }
+
+///tam giác vuông trên phải:
+
+/*
+* * * * *
+- * * * *
+- - * * *
+- - - * *
+- - - - *
+*/
+
+
+                var cach= '&nbsp;';
+                for(var i=4;i>=0;i--){
+                    for(var j=0;j<=i;j++){
+                        document.write("*");
+                        if(j==i){
+                            document.write("<br>");
+                            if(j==4){
+                                document.write(cach+cach);
+                            }else if(j==3&&i==3){
+                                document.write(cach+cach+cach+cach);
+                            }else if(j==2&&i==2){
+                                document.write(cach+cach+cach+cach+cach+cach);
+                            }else if(j==1&&i==1){
+                                document.write(cach+cach+cach+cach+cach+cach+cach+cach);
+                            }
+                        }
+                    } 
+                }
+
+
+
+
+        
+    </script>
+</body>
+</html>
