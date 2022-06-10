@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ///hàm chuyển PM AM
+        function timeConversion(s) {
+            let timeArr = s.split(":");
+            let sec = (timeArr[2][0] + timeArr[2][1]);
+            let timeFormat = s.slice(-2);
+            let time = {
+                hours: timeArr[0],
+                min: timeArr[1],
+                sec,
+                timeFormat
+            }
+            if (timeFormat === "PM" && parseInt(time.hours) != 12) {
+                time.hours = parseInt(time.hours) + 12;
+
+            } else if (timeFormat === "AM" && parseInt(time.hours) == 12) {
+                time.hours = "00";
+            }
+            var a = (time.hours + ":" + time.min + ":" + time.sec);
+            return a;
+        }
+
+
+        let time = "07:05:45PM";
+        timeConversion(time);
+
+    </script>
+</body>
+</html>

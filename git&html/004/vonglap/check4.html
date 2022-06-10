@@ -60,28 +60,66 @@
 - - - - *
 */
 
-
-                var cach= '&nbsp;';
-                for(var i=4;i>=0;i--){
-                    for(var j=0;j<=i;j++){
-                        document.write("*");
-                        if(j==i){
-                            document.write("<br>");
-                            if(j==4){
-                                document.write(cach+cach);
-                            }else if(j==3&&i==3){
-                                document.write(cach+cach+cach+cach);
-                            }else if(j==2&&i==2){
-                                document.write(cach+cach+cach+cach+cach+cach);
-                            }else if(j==1&&i==1){
-                                document.write(cach+cach+cach+cach+cach+cach+cach+cach);
-                            }
-                        }
-                    } 
-                }
+var n = 5;
+        for (let i = 1; i <= n; i++) {
+            console.log("*".repeat(i).padStart(n));
+        }
 
 
+                // var cach= '&nbsp;';
+                // for(var i=4;i>=0;i--){
+                //     for(var j=0;j<=i;j++){
+                //         document.write("*");
+                //         if(j==i){
+                //             document.write("<br>");
+                //             if(j==4){
+                //                 document.write(cach+cach);
+                //             }else if(j==3&&i==3){
+                //                 document.write(cach+cach+cach+cach);
+                //             }else if(j==2&&i==2){
+                //                 document.write(cach+cach+cach+cach+cach+cach);
+                //             }else if(j==1&&i==1){
+                //                 document.write(cach+cach+cach+cach+cach+cach+cach+cach);
+                //             }
+                //         }
+                //     } 
+                // }
 
+
+///tam giác vuông phải dưới:
+
+            // var cach= '&nbsp;';
+            // for(var i=0;i<=4;i++){ 
+            //     for(j=0;j<=i;j++){          
+            //         document.write("*");
+            //         if(i=3){
+            //             document.write(cach);
+            //         }
+            //         if (i==j){
+            //         document.write("<br>");
+            //         }
+                    
+            //     }
+                
+            // }
+
+
+            // for(var i=1;i<100;i++){
+            //     if(i%3==0 && i%5==0){
+            //         document.write("FizzBuzz"+"<br>");
+            //     }else if(i%3==0){
+            //         document.write("Fizz"+"<br>");
+            //     }else if(i%5==0){
+            //         document.write("Buzz"+"<br>");
+            //     }else{
+            //         document.write(i+"<br>");
+            //     }
+            // }
+
+//             var cach= '&nbsp;';
+// document.write("********"+"<br>");
+// document.write("*"+cach+cach+cach+cach+cach+cach+cach+cach+cach+cach+cach+cach+"*"+"<br>");
+// document.write("********");
 
         
     </script>

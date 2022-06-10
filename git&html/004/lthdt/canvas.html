@@ -1,0 +1,35 @@
+<canvas id="myCanvas" width="500" height="500"></canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ///ve duong thang
+    // ctx.moveTo(0, 0);
+    // ctx.lineTo(200, 100);
+    // ctx.stroke();
+    // ///ve hinh tron
+    ctx.beginPath();
+    ctx.arc(95, 50, 40, 0, 2 * Math.PI);//2*Math.PI la va 1 htron, 1*Math.PI la ve 1 nua hton;
+    ctx.stroke();
+    // ///ve chu
+    // ctx.font = "30px Arial";
+    // ctx.fillText("Hello World", 10, 50);
+
+    ctx.fillStyle = '#fa4b2a';
+    var x = 10;
+    var y = 40;
+    ctx.fillRect(x, y, 50, 50);
+
+    setInterval( function(){
+        //xoa hinh cu
+        ctx.clearRect(x, y, 50, 50);
+
+        x += 10;
+        y += 10;
+
+        //ve hinh
+        ctx.fillRect(x, y, 50, 50);
+
+    }, 1000 );
+
+
+// </script>

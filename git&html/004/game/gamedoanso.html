@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = parseInt(prompt("Nhập khoảng số bạn muốn đoán"));
+        var du_doan = parseInt(prompt("Mời người chơi nhập dự đoán"));
+        var dap_an = Math.floor(Math.random()* a);
+        var i=0;
+        console.log(dap_an);
+        for (i=1; i<5;i++){
+         
+            if(du_doan==dap_an){
+                alert("chúc mừng bạn đã đoán đúng");
+                break;
+            }else if(du_doan>dap_an){
+             
+                alert("số bạn đoán lớn hơn đáp án");
+                var du_doan = parseInt(prompt("Mời người chơi đoán lại"));
+            }else if(du_doan<dap_an){
+              
+                alert("số bạn đoán nhỏ hơn đáp án");
+                var du_doan = parseInt(prompt("Mời người chơi đoán lại"));
+            }
+            if (i==4){
+                alert("game over");
+                break;
+            }
+            
+        }
+        
+            
+    </script>
+</body>
+</html>

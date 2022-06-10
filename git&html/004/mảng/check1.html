@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- <form>
+    <input type="text" id="value1">
+    <input type="button" value="add" id="Add" onclick="add_12()">
+    <input type="submit" value="Display" id="display" onclick="display_12()"><br>
+    <label id="dp"></label>
+</form> -->
+<script>
+    // let x=0;
+    // let array= Array();
+    // function add_12() {
+    //     array[x]=document.getElementById("value1").value;
+    //     alert("Element: " + array[x] + " added to index " +x);
+    //     x++;
+    //     document.getElementById("value1").value="";
+    // }
+    // function display_12(){
+    //     let e = "<hr/>";
+    //     for(let i=0; i < array.length; i++){
+    //         e= e + "element: " + i + " = " + array[i] + "<br/>";
+    //     }
+    //     document.getElementById("dp").innerHTML=e;
+    // }
+
+
+    // var books = ["văn", "sử", "địa"];
+    // // console.log(books.length);
+    // // console.log(books);
+    // // console.log(books[1]);
+    // // console.log(books[0]);
+    // // console.log(books[2]);
+    // books[0]= "Toán";
+    // books[1]= "Lý";
+    // books[2]= "Hoá";
+    // books[3]= "Tiếng anh";
+    // books[4]= "Văn";
+    // books.push("Sử")
+    // // console.log(books);
+    // for(var i=0; i<books.length; i++){
+    //     console.log(books[i]);
+    // }
+
+// var number =[1, 3, 5, 7, 9];
+// var sum=0;
+//     for(var i=0; i<number.length; i++){
+//         sum=sum+number[i];
+//     }console.log(sum);
+
+
+
+////đảo ngược các phần tử;
+// var x = [-3,5,1,3,2,10];
+// var first=0;
+// var last= x.length-1;
+// while(first<last){
+//     var b=x[first];
+//     x[first]=x[last];
+//     x[last]=b;
+//     first++;
+//     last--;
+// }
+// document.write(x);
+    //////tìm xem số nhập vào có nằm trong mảng
+    var x = [-3,5,1,3,2,10];
+    var a=prompt("bạn nghĩ rằng số này nằm trong mảng??");
+    for(var i=0; i<x.length; i++){
+        if (a==x[i]){
+            document.write("bạn đã đúng "+a+" nằm trong mảng");
+            }
+    }
+
+</script>
+</body>
+</html>

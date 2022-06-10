@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var hinh_vuong = function(){
+        //     this.chieu_dai='';
+        //     this.chieu_rong='';
+            
+        //     this.chu_vi = function(){
+        //         var chuvi = (this.chieu_dai+this.chieu_rong)*2;
+        //         return chuvi
+        //     }
+        //     this.dien_tich = function(){
+        //         var dientich= this.chieu_dai*this.chieu_rong;
+        //         return dientich;
+        //     }
+        // }
+        // var hinh_vuong_1 = new hinh_vuong;
+        // hinh_vuong_1.chieu_dai=2;
+        // hinh_vuong_1.chieu_rong=4;
+        // document.write(hinh_vuong_1.chu_vi()+"<br>");
+        // document.write(hinh_vuong_1.dien_tich());
+
+
+        var chuyen_nhiet_do = function(){
+            this.do_C='';
+            this.chuyen_qua_f = function(){
+               var b = ((this.do_C*9)/5)+32;
+               return b;
+            }
+            this.chuyen_qua_k = function(){
+                var c = (this.do_C+273.15);
+                return c;
+            }
+        }
+        var chuyen_nhiet_do_1 = new chuyen_nhiet_do;
+        var a =parseInt(prompt("nhập độ C:"))
+        chuyen_nhiet_do_1.do_C = a;
+        document.write(a+"độ C ="+chuyen_nhiet_do_1.chuyen_qua_f()+" độ F"+"<br>"
+        +a +" độ C = "+chuyen_nhiet_do_1.chuyen_qua_k()+" độ K")
+
+
+    </script>
+
+</body>
+</html>

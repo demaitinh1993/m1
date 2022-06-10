@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        canvas {
+            background-color: black;
+            border: 10px solid rgb(169, 194, 30);
+            margin-left: 27%;
+        }
+
+        table {
+            margin-left: 43%;
+
+        }
+
+        .container {
+            display: flex;
+        }
+        #bang3 {
+            text-align: center;
+            background-color: bisque;
+            /* border-color: white; */
+            border: 1px solid black;
+
+        }
+        td {
+            border: 1px solid black;
+        
+        }
+       
+        #no1 {
+            border: 0px;
+            
+        }
+      
+
+      
+
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td id ="no1"><button type="button" class="btn btn-warning " onclick="ban_dau()">Start</button></td>
+            <td id ="no1"><button type="button" class="btn btn-danger " onclick="restart1()">Reset</button></td>
+            <td id ="no1"><label class="btn btn-success ">Poin <label id="mark"></label></label></td>
+        </tr>
+    </table>
+
+    <div class="container">
+        <canvas id="game" width="500" height="500">
+        </canvas>
+            <div id="bang1">
+            </div>
+    </div>
+
+    <script>
+        var c = document.getElementById("game");
+        var ctx = c.getContext("2d");
+
+        var x = (Math.random() * 400) + 50; var y = 10;
+        var dx = 5, dy = 2;
+        var r = 10;
+        var score = 0;
+        var isGameover = false;
+        var thanh_chan = {
+            width: 70,
+            height: 10,
+            x: 0,
+            y: c.height - 10,
+            speed: 30,
+        }
+        var audio = new Audio("./audio/images/a.mp3")
+        function Ball() {/////vẽ quả bóng và tô màu
+            ctx.beginPath();
+            ctx.arc(x, y, r, 0, Math.PI * 2);
+            ctx.fillStyle = "red";
+            ctx.fill();
+            ctx.closePath();
+
+        }
+        function restart1() {///hàm restart
+            return location.reload();
+            
+
+        }
+        function Thanh_chan() {///xẽ thanh chắn và tô màu
+            ctx.beginPath();
+            ctx.rect(thanh_chan.x, thanh_chan.y, thanh_chan.width, thanh_chan.height);
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        function phan_xa() {///bóng gặp tường thì di chuyển ngược lại
+            if (x < r || x > c.width - r) {
+                dx = -dx;
+            }
+            if (y < r) {
+                dy = -dy;
+            }
+        }
+        function ban_dau() {///onclick bắt đầu
+            toc_do_0 = toc_do;
+            nguoi_choi();
+
+        }
+        function toc_do_0() {///bam đầu quả bóng đứng yên
+            x = x; y = y;
+        }
+        function toc_do() {///quả bóng di chuyển theo đương dx, dy
+            x += dx;
+            y += dy;
+
+        }
+        var bang_xep_hang = localStorage.getItem('bang_xep_hang');///lấy dữ liệu từ trình duyệt ra 
+        if(!bang_xep_hang){
+            bang_xep_hang = [];
+        }else{
+            bang_xep_hang = JSON.parse(bang_xep_hang);///chuyển dữ liệu vừa lấy ra về dạng mảng
+        }
+        var diem_nguoi_choi = localStorage.getItem('diem_nguoi_choi');
+        if(!diem_nguoi_choi){
+            diem_nguoi_choi = [];
+        }else{
+            diem_nguoi_choi = JSON.parse(diem_nguoi_choi);
+            // diem_nguoi_choi.sort(function(a, b){return b - a});
+        }
+        
+        var xephang = [bang_xep_hang, diem_nguoi_choi];
+
+        bang(xephang);
+
+
+        function nguoi_choi() {
+            var ten_nguoi_choi = prompt("nhap ten nguoi choi");
+            bang_xep_hang.push(ten_nguoi_choi);
+            localStorage.setItem('bang_xep_hang', JSON.stringify(bang_xep_hang))
+        }
+        function bang(xephang) {
+            let a, i;
+            a = "<table id='bang3' width='220px'>"
+                a = a + "<tr>"
+                    a += "<td colspan='2'><h5>" + 'LỊCH SỬ NGƯỜI CHƠI' + "</h5></td>"
+                a = a + "</tr>"
+                a = a + "<tr>"
+                    a += "<td>"+"<b>" + 'Người chơi' +"</b>" +"</td>"
+                    a += "<td>"+"<b>" + 'Điểm' +"</b>" +"</td>"
+                a = a + "</tr>"
+            for (i = 0; i < bang_xep_hang.length; i++) {
+               
+                a = a + "<tr>"
+                    a += "<td>" + bang_xep_hang[i] + "</td>"
+                    a += "<td>" + diem_nguoi_choi[i] + "</td>"
+                a = a + "</tr>"
+            }
+            a = a + "</table>";
+            document.getElementById("bang1").innerHTML = a;
+        }
+
+
+
+        document.addEventListener("keydown", function (event) {//lấy phím và sự kiện bàn phím
+            console.log("KEY DOWN"),
+                console.log(event)
+            if (event.keyCode == 37) {
+                thanh_chan.x -= thanh_chan.speed;
+            } else if (event.keyCode == 39) {
+                thanh_chan.x += thanh_chan.speed;
+            }
+            if (thanh_chan.x < 0) {
+                thanh_chan.x = 0
+            } else if (thanh_chan.x > c.width - thanh_chan.width) {
+                thanh_chan.x = c.width - thanh_chan.width
+            }
+
+        });
+        function ball_thanh_chan() {///khi bóng chạm thanh chắn thì di chuyển ngược lại và tính điểm
+            if (x + r >= thanh_chan.x && x + r <= thanh_chan.x + thanh_chan.width &&
+                y + r >= c.height - thanh_chan.height) {
+                dy = -dy;
+                score++;
+                document.getElementById("mark").innerHTML = score;
+            }
+        }
+
+        // var audio = new Audio("./images/a.mp3");
+        var audio1 = new Audio("./images/votay.mp3");
+
+
+        function ve() {
+            if (!isGameover) {
+                ctx.clearRect(0, 0, c.width, c.height);
+                Ball();
+                Thanh_chan();
+                phan_xa();
+                ball_thanh_chan();
+                toc_do_0();
+                if (y > c.height - r) {
+                    isGameover = true;
+                }
+                requestAnimationFrame(ve);
+            } else {
+                audio1.play();
+                alert("Game over! Điểm số của bạn là: " + score);
+                diem_nguoi_choi.push(score);
+                localStorage.setItem('diem_nguoi_choi', JSON.stringify(diem_nguoi_choi))
+
+                bang(xephang);
+            }
+        }
+        ve();
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var mon=["toan", "lý", "hoa", "sinh"];
+        // console.log(mon.toString());
+        // console.log(mon.join());
+        // console.log(mon.join('+'));
+
+//////dấu - giữa các số chia hết cho 2
+        var num = [prompt("nhập các phần tử của mảng:")];
+        var tr = num.toString();
+        var a= [tr[0]];
+        for(var i=1; i<tr.length; i++) {
+            if(tr[i-1]%2==0 && tr[i]%2==0){
+                a.push("-", tr[i]);
+            }else {
+                a.push(tr[i]);
+            }
+        }
+        console.log(a.join(""));
+
+
+
+
+    </script>
+</body>
+</html>

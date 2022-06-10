@@ -40,40 +40,43 @@
 ////xuất ra số fibonacci thứ n:
 
         //    let x = parseInt(prompt("bạn muốn thấy bao nhiêu số fibonecci"));
-    
-        //     var x0 = 0, x1 = 1, xn = 1, sum = 0
-        //     for (var i = 0; i < x; i++) {
+        //     var x0 = 0, x1 = 1, xn = 1;
+        //     document.write(x0+",");
+        //     document.write(x1+",");
+        //     for (var i = 0; i < x-2; i++) {
         //         xn = x0 + x1
         //         x0 = x1;
         //         x1 = xn;
         //         document.write(xn + ',')
         //     }
-        // }
+
   
 
 ////số fibo đầu tiên chia hết cho 5:
                 // var x;
                 // var x0= 0, x1=1, xn=1;
-                // for(var i=0; i<4; i++){
+                // for(var i=0; i<100; i++){
                 //     xn = x1+x0; 
                 //     x0 = x1;
                 //     x1 = xn;
                 //     if(xn%5==0){
                 //         document.write(xn);
+                //         break;
                 //     }
                 // }
 
 ////tổng các số đầu tiên trong dãy fibo:
-                // var x= parseInt(prompt("tổng các số đầu tiên trong dãy fibonacci: "));
-                // var x0=0, x1=1, xn=1;
-                // var c=0;
-                // for(var i=0; i<x; i++) {
-                //     xn= x0+ x1;
-                //     x0= x1;
-                //     x1= xn;
-                //     c+=xn;
-                    
-                // }alert(c);
+                var x= parseInt(prompt("tổng các số đầu tiên trong dãy fibonacci: "));
+                var x0=0, x1=1, xn=1;
+                var c=x0+x1;
+                document.write(x0+",");
+                document.write(x1+",");
+                for(var i=0; i<x-2; i++) {
+                    xn= x0+ x1;
+                    x0= x1;
+                    x1= xn;
+                    c+=xn;
+                }alert(c);
 
 
                 

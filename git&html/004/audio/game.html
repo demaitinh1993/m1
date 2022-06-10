@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nengame {
+            /* background-color: rgb(63, 203, 77); */
+            width: 450px;
+            height: 500px;
+            margin: auto;
+        }
+        .hang {
+            display:flex;
+            flex-grow: 1;
+            /* background-color: blue; */
+        }
+        .gameBoad {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .oso {
+            font-weight: bold;
+            flex-grow: 1;
+            margin: 5px;
+            font-size: 5em;
+            width: 90px;
+            height: 90px;
+        }
+        .text {
+           text-align: center;
+           color: brown;
+           font-size: 2em;
+        }
+        .controls {
+            text-align: center;
+            color: blue;
+        }
+        .xcolor {
+            color: red;
+        }
+        .ocolor {
+            color:blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nengame">
+        <div class = "text">Game</div>
+        <div class = "gameBoad">
+            <div class = "hang">
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+            </div>
+            <div class = "hang">
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+            </div>
+            <div class = "hang">
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+            </div>
+            <div class = "hang">
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+                <button class="oso" onclick ="play(this)"></button>
+            </div>
+        </div>
+        <hr>
+        <div class="controls">
+            <button class="reset">Reset</button>
+        </div>
+    </div>
+</body>
+<script>
+    var turn = true;
+    var clickedcount = 0;
+    function play(oso){
+        oso.innerText = turn ? "X" : "O";
+        oso.classList.add(turn ? "xcolor" : "ocolor");
+        oso.setAttribute("disabled", "disabled");
+
+        turn = !turn;
+        clickedcount++;
+
+        if (clickedcount ==16){
+            alert("Game Finished");
+        }
+    }
+    
+</script>
+</html>

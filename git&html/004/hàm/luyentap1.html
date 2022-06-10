@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- ///bài 1: -->
+    <!-- <input type="button" id="a" value="Click me" onclick="alertMessage()">
+    <script>
+        function alertMessage(){
+            alert("xin chào")
+        }
+    </script> -->
+    <!-- ////bài 2:  -->
+    <!-- <script>
+            function numberplus(number) {
+                var a = number +1;
+                return a
+            }
+            var b= parseInt(prompt("nhập số vào đây"));
+            alert(numberplus(b));
+        </script> -->
+
+    <!-- ///bài 3: -->
+    <!-- <script>
+                 function sum(a,b){
+                     if (a>b){
+                         alert(a+" > "+b)
+                     }else if(a<=b){
+                         var sum = a+b;
+                     }
+                     return sum;
+                 }
+                 var c = parseInt(prompt("nhập c"));
+                 var d = parseInt(prompt("nhập d"));
+                 alert(sum(c,d));
+        </script>
+        -->
+
+
+    <!-- //bài 4: -->
+    <!-- <script>
+            function addNumbers() {
+                firstNum = 4;
+                secondNum = 8;
+                result = firstNum + secondNum;
+                return result;
+            }
+            result = 0;
+            result = addNumbers(); -->
+
+
+
+    <!-- //bài 5: -->
+    <script>
+    
+        var a = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+        var b = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+        
+        function tim_kiem(c) {
+            var flag = 0;
+            var result = "";
+            for (var i = 0; i<a.length; i++) {
+                if (c == a[i]) {
+                    flag = i;
+                    for (var j = 0; j<b.length; j++) {
+                        if (flag==j) {
+                            result = "chòm sao bạn tìm là: "+ b[j];
+                            document.write(result);
+                            return result;
+                        }
+                    }
+                 }else if(c!=a[i] && i==a.length-1){
+                     document.write("Thứ bạn muốn tìm nằm ngoài vũ trụ");
+                     break;
+                 }
+                
+            }
+          
+        }
+        var c = prompt("Nhập chòm sao bạn muốn tìm");
+        tim_kiem(c);
+   
+    </script>
+</body>
+
+
+</html>

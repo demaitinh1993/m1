@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var tusach = [["toan", "ly", "hoa"],
+                      ["van", "su", "dia"]];
+                    //   console.log(tusach[0][0]);//toan
+                    //   console.log(tusach[0][1]);//ly
+                    //   console.log(tusach[0][2]);//hoa
+                    //   console.log(tusach[1][0]);//van
+                    //   console.log(tusach[1][1]);//su
+                    //   console.log(tusach[1][2]);//dia
+                    
+        tusach[0][1]="vat ly";
+        tusach[0][2]="hoa hoc";
+        tusach[1][0]="van hoc";
+        // console.log(tusach);
+        // for(var i = 0; i<=1; i++){
+        //     for(var k = 0; k<=2; k++){
+        //         console.log(tusach[i][k]);
+        //     }
+        // }
+/////thêm anh vào sai hoa
+            tusach[0][3]="anh";  
+            tusach[1][3]= "sinh";
+            // console.log(tusach);
+
+
+            // for(var i= 2; i<10; i++){
+            //     for(var j= 1; j<=10; j++){
+            //         document.write(i+"*"+j+"="+i*j+"<br>");
+            //     }
+            // }
+            
+
+            var number = [];
+            for(var index=0; index<=2; index++){
+                    number[index] =[];
+                for(var k=0; k<=2; k++){
+                    number[index][k]= index+"-"+k;
+                 
+
+                }
+               
+            }
+            console.log(number);
+
+    </script>
+
+</body>
+</html>
