@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="400" height="400" style="border: 2px solid rebeccapurple;"></canvas>
+        <script>
+            class Rectangle {
+                constructor(ts_x, ts_y, ts_color, ts_width, ts_height) {
+                    this.x = ts_x;
+                    this.y = ts_y;
+                    this.color = ts_color;
+                    this.width = ts_width;
+                    this.height = ts_height;
+                }
+                render(ts_x,ts_y,ts_width,ts_height) {
+                let ctx = document.getElementById("my_canvas").getContext("2d");
+                var c = document.getElementById("myCanvas");
+                ctx.moveTo(ts_x, ts_y);
+                ctx.lineTo(ts_x, ts_width);
+                ctx.lineTo(ts_height, ts_width);
+                ctx.lineTo(ts_height, ts_y);
+                ctx.lineTo(ts_x, ts_y);
+                ctx.fillStyle = "#ff0000";
+                ctx.fill();
+                ctx.stroke();
+           }
+            }
+            let my_circle = new Rectangle();
+            my_circle.render(10,20,10,20);
+
+            </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="my_canvas" width="400" height="400" style="border: 2px solid rebeccapurple;"></canvas>
+    <script>
+        function bai4() {
+            class Circle {
+                constructor(x,y,r,color) {
+                    this.x = x;
+                    this.y = y;
+                    this.r = r;
+                    this.color = color;
+                }
+                 render() {
+                    var c = document.getElementById('game')
+                    var nv2 = c.getContext("2d")
+                    nv2.beginPath();
+                    nv2.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+                    nv2.fill();
+                }
+            } var circle = new Circle(10, 10, 100, '#FF0000')
+            circle.render()
+        }
+
+    </script>
+</body>
+</html>
