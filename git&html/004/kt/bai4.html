@@ -7,31 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="my_canvas" width="400" height="400" style="border: 2px solid rebeccapurple;"></canvas>
+    <canvas id="my_canvas" width="500" height="500" style="border: 1px solid rebeccapurple;"></canvas>
         <script>
             class Rectangle {
-                constructor(ts_x, ts_y, ts_color, ts_width, ts_height) {
-                    this.x = ts_x;
-                    this.y = ts_y;
-                    this.color = ts_color;
-                    this.width = ts_width;
-                    this.height = ts_height;
+                constructor(x, y, width, height,color) {
+                    this.x = x;
+                    this.y = y;
+                    this.width = width;
+                    this.height = height;
                 }
-                render(ts_x,ts_y,ts_width,ts_height) {
+                render() {
                 let ctx = document.getElementById("my_canvas").getContext("2d");
-                var c = document.getElementById("myCanvas");
-                ctx.moveTo(ts_x, ts_y);
-                ctx.lineTo(ts_x, ts_width);
-                ctx.lineTo(ts_height, ts_width);
-                ctx.lineTo(ts_height, ts_y);
-                ctx.lineTo(ts_x, ts_y);
-                ctx.fillStyle = "#ff0000";
-                ctx.fill();
-                ctx.stroke();
+                ctx.beginPath();
+                ctx.fillStyle='#ff0000';
+                ctx.fillRect(this.x, this.y,  this.width,  this.height);
+                ctx.closePath();
            }
             }
-            let my_circle = new Rectangle();
-            my_circle.render(10,20,10,20);
+            let hinh_chu_nhat = new Rectangle(50,50,100,200);
+            hinh_chu_nhat.render();
 
             </script>
 </body>
